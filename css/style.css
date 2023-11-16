@@ -4,7 +4,7 @@ body, html {
 }
 
 .sky {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/background.png');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,4 +44,22 @@ body, html {
 .flowers img {
     height: 50px; /* Set this to the actual height of your image */
     /* Add animation properties here */
+}
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+#animated-flower {
+    /* Position it at the center bottom of your screen */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px; /* Adjust as needed */
+    animation: sway 5s infinite alternate ease-in-out;
 }
